@@ -32,9 +32,9 @@ const Home = (props) => {
     setNetwork(res);
   }, []);
 
-  //  const publicapi ="https://mineforyou.herokuapp.com"
+  //  const publicapi ="http://52.90.113.130:7000"
   function Mint(data) {
-    const url = "https://mineforyou.herokuapp.com/mint";
+    const url = "http://52.90.113.130:7000/mint";
     fetch(url, {
       method: "POST",
       headers: {
@@ -96,7 +96,7 @@ const Home = (props) => {
       getAllAccountDetails().then((res) => {
         console.log(res.result);
         setAddress(res.result);
-        const url = "https://mineforyou.herokuapp.com/claim_details";
+        const url = "http://52.90.113.130:7000/claim_details";
         fetch(url, {
           method: "POST",
           headers: {
@@ -143,7 +143,7 @@ const Home = (props) => {
                 console.log("gjhgfjhj");
                 const data = address;
                 console.log(data);
-                const url = "https://mineforyou.herokuapp.com/claim";
+                const url = "http://52.90.113.130:7000/claim";
                 fetch(url, {
                   method: "POST",
                   headers: {
