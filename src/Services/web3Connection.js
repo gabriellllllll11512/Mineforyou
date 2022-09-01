@@ -19,18 +19,18 @@ export const NetworkChanged = async () => {
 
   if (window.ethereum) {
     let chainID = await web3_.eth.getChainId()
-    if (chainID != 3) {
+    if (chainID != 56) {
       await window.ethereum.request({
         method: 'wallet_switchEthereumChain',
-        params: [{ chainId: '0x3' }], // chainId must be in hexadecimal numbers
+        params: [{ chainId: '0x38' }], // chainId must be in hexadecimal numbers
       })
 
     }
     window.ethereum.on("networkChanged", async (res) => {
-      if (res != 3) {
+      if (res != 56) {
         await window.ethereum.request({
           method: 'wallet_switchEthereumChain',
-          params: [{ chainId: '0x3' }], // chainId must be in hexadecimal numbers
+          params: [{ chainId: '0x38' }], // chainId must be in hexadecimal numbers
         })
 
 
