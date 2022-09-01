@@ -303,7 +303,7 @@ const Home = (props) => {
                   :
                 </h3>
                 <h4 className="contractaddress">
-                  0xE0F6F1b397327e94A09F4b8CBE01b61bFcD2Ca7F
+                  0x9839D3B56Da56F70083b472d25fB414a884ff94e
                 </h4>
               </div>
             </div>
