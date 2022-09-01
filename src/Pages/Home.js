@@ -370,7 +370,7 @@ const Home = (props) => {
                     500.000 A<span style={{ fontSize: "15px" }}>DDING</span> I
                     <span style={{ fontSize: "15px" }}>N</span> E
                     <span style={{ fontSize: "15px" }}>XCHANGES</span>/A
-                    <span style={{ fontSize: "15px" }}>DVERSITING</span>.
+                    <span style={{ fontSize: "15px" }}>DVERTISING</span>.
                   </li>
                   <li className="liststyle">
                     T<span style={{ fontSize: "15px" }}>EAM</span>: $MNY
