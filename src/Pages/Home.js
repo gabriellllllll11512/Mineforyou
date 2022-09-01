@@ -302,9 +302,11 @@ const Home = (props) => {
                   </span>
                   :
                 </h3>
+<a href="https://bscscan.com/address/0x767f54d9F5486368438419845fBB8523787Ed92C">
                 <h4 className="contractaddress">
-                  0x9839D3B56Da56F70083b472d25fB414a884ff94e
+                  0x767f54d9F5486368438419845fBB8523787Ed92C
                 </h4>
+</a>
               </div>
             </div>
             {/* other  section */}
