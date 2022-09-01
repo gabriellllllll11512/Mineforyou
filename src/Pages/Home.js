@@ -367,7 +367,7 @@ const Home = (props) => {
                     M<span style={{ fontSize: "15px" }}>ARKETING</span>: $MNY
                     500.000 A<span style={{ fontSize: "15px" }}>DDING</span> I
                     <span style={{ fontSize: "15px" }}>N</span> E
-                    <span style={{ fontSize: "15px" }}>XCANGES</span>/A
+                    <span style={{ fontSize: "15px" }}>XCHANGES</span>/A
                     <span style={{ fontSize: "15px" }}>DVERSITING</span>.
                   </li>
                   <li className="liststyle">
