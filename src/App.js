@@ -6,7 +6,7 @@ import { store } from "./Redux/store";
 import { NetworkChanged } from './Services/web3Connection';
 // import img from "./background.jpg"
 // import img from "../public/images/svg/background.jpg"
-
+//fdslkjfsdlkfdslk
 function App() {
   const [Connect, setConnect] = React.useState(false);
 

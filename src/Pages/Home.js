@@ -18,6 +18,7 @@ const Home = (props) => {
   const [address, setAddress] = React.useState("");
   const [mintdata, setmintData] = React.useState("");
   const [Network, setNetwork] = React.useState(false);
+  const [isApi,setIsApi] = React.useState(false);
   const [date, setDate] = React.useState("");
   useEffect(() => {
     if (props.Connect) {
@@ -34,9 +35,10 @@ const Home = (props) => {
 
   //  const publicapi ="https://mineforyou.herokuapp.com"
   function Mint(data) {
-    const url = "https://mineforyou.herokuapp.com/mint";
-    fetch(url, {
-      method: "POST",
+  
+      const url = "https://mineforyou.herokuapp.com/mint";
+      fetch(url, {
+        method: "POST",
       headers: {
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "*",
@@ -54,17 +56,18 @@ const Home = (props) => {
         if (value.value != null) {
           setDate(
             new Date(value.value.updatedAt).getTime() / 1000 + 24 * 60 * 60
-          );
-        }
-      });
-  }
-  //Mint Api
+            );
+          }
+        });
+      }
+    
+      //Mint Api
   const Details_Mint = () => {
     const data = store.getState().ConnectivityReducer.metamaskAddress;
 
     if (props.Connect) {
       if (store.getState().ConnectivityReducer.metamaskAddress) {
-        if (details != null) {
+        if (details !== null) {
           // 24 * 60 * 60
 
           if (
@@ -72,13 +75,16 @@ const Home = (props) => {
             new Date().getTime() / 1000
           ) {
             Mint(data);
-            Swal.fire("You Mine Successfull");
+            Swal.fire("You Mine2 Successfull");
           } else {
             Swal.fire("You Can Mine Once a day");
           }
         } else {
-          Mint(data);
-          Swal.fire("You Mine Successfully");
+      
+
+            Mint(data);
+            Swal.fire("You Mine Successfully");
+          
         }
       }
     } else {
@@ -111,6 +117,7 @@ const Home = (props) => {
             return data.json();
           })
           .then((da) => {
+            setIsApi(true)
             setDetails(da);
             if (da != null) {
               setDate(new Date(da.updatedAt).getTime() / 1000 + 24 * 60 * 60);
@@ -128,7 +135,7 @@ const Home = (props) => {
     console.log(address);
     if (props.Connect) {
       let chainID = await web3_.eth.getChainId();
-      if (chainID == 3) {
+      if (chainID == 56) {
         if (details != null) {
           if (details.token != 0 && details.token !== undefined) {
             await new web3_.eth.Contract(PrivateToken, PrivateSale).methods
@@ -157,7 +164,8 @@ const Home = (props) => {
                   .then(async (data) => {
                     return data.json();
                   })
-                  .then((da) => setDetails(da));
+                  .then((da) =>  setDetails(da)
+                  );
                 // Swal.fire("You Claim Successfully");
               });
           } else {
@@ -302,11 +310,9 @@ const Home = (props) => {
                   </span>
                   :
                 </h3>
-<a href="https://bscscan.com/address/0x767f54d9F5486368438419845fBB8523787Ed92C">
                 <h4 className="contractaddress">
-                  0x767f54d9F5486368438419845fBB8523787Ed92C
+                 0x9839D3B56Da56F70083b472d25fB414a884ff94e
                 </h4>
-</a>
               </div>
             </div>
             {/* other  section */}
@@ -369,8 +375,8 @@ const Home = (props) => {
                     M<span style={{ fontSize: "15px" }}>ARKETING</span>: $MNY
                     500.000 A<span style={{ fontSize: "15px" }}>DDING</span> I
                     <span style={{ fontSize: "15px" }}>N</span> E
-                    <span style={{ fontSize: "15px" }}>XCHANGES</span>/A
-                    <span style={{ fontSize: "15px" }}>DVERTISING</span>.
+                    <span style={{ fontSize: "15px" }}>XCANGES</span>/A
+                    <span style={{ fontSize: "15px" }}>DVERSITING</span>.
                   </li>
                   <li className="liststyle">
                     T<span style={{ fontSize: "15px" }}>EAM</span>: $MNY
@@ -393,8 +399,7 @@ const Home = (props) => {
             <div id="">
               <div>
                 <h3 style={{ display: "flex", justifyContent: "center" }}>
-                  R<span style={{ fontSize: "15px" }}>EAMINING</span> T
-                  <span style={{ fontSize: "15px" }}>IME</span>
+                REMAINING TIME
                 </h3>
 
                 <CounterComponent endDate={date && date} />
@@ -419,6 +424,7 @@ const Home = (props) => {
                   id="connect"
                   display="none"
                   onClick={Details_Mint}
+                  disabled={!isApi ? true : false}
                 >
                   MINE
                 </button>
