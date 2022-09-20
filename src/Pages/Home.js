@@ -77,7 +77,7 @@ const Home = (props) => {
             Mint(data);
             Swal.fire("Your Mine Successful");
           } else {
-            Swal.fire("You Can Mine Once a day");
+            Swal.fire("You Can Mine Once A Day");
           }
         } else {
       
