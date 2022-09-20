@@ -75,7 +75,7 @@ const Home = (props) => {
             new Date().getTime() / 1000
           ) {
             Mint(data);
-            Swal.fire("You Mine2 Successfull");
+            Swal.fire("Your Mine Successful");
           } else {
             Swal.fire("You Can Mine Once a day");
           }
@@ -83,7 +83,7 @@ const Home = (props) => {
       
 
             Mint(data);
-            Swal.fire("You Mine Successfully");
+            Swal.fire("Your Mine Successful");
           
         }
       }
