@@ -172,10 +172,10 @@ const Home = (props) => {
             Swal.fire("You Don't Have Enough Token");
           }
         } else {
-          Swal.fire("You Dont Mine Any Token,Please Mine Token First");
+          Swal.fire("You Don't Mine Any Token, Please Mine Token First");
         }
       } else {
-        Swal.fire("Warning", "Please Change Your Network ", "warning]");
+        Swal.fire("Warning", "Please Change Your Network", "warning]");
       }
     } else {
       Swal.fire("Please Connect To The Wallet");
@@ -376,7 +376,7 @@ const Home = (props) => {
                     500.000 A<span style={{ fontSize: "15px" }}>DDING</span> I
                     <span style={{ fontSize: "15px" }}>N</span> E
                     <span style={{ fontSize: "15px" }}>XCHANGES</span>/A
-                    <span style={{ fontSize: "15px" }}>DVERSITING</span>.
+                    <span style={{ fontSize: "15px" }}>DVERTISING</span>.
                   </li>
                   <li className="liststyle">
                     T<span style={{ fontSize: "15px" }}>EAM</span>: $MNY
