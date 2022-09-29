@@ -1455,6 +1455,32 @@ html {
   align-items: center;
 }
 
+.minnedec {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  /* width: 100px;
+  height: 69px; 
+  /* justify-content: center;
+  border-radius: 50%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+}
+.timerdetil {
+  font-weight: bold;
+  margin: auto;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  width: 130px;
+  height:73px;
+  justify-content: center;
+  border-radius: 50%;
+  color: #000;
+}
+
 
 #claim-text-wrapper #ape-number .calcs {
   display: --webkit-box;
