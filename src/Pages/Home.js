@@ -11,6 +11,7 @@ import Swal from "sweetalert2";
 import { NetworkChanged, web3_ } from "../Services/web3Connection";
 import CounterComponent from "./CounterComponents";
 import { walletDisconnect } from "../Services/WalletConnection";
+import pdf from "../File/Whitepaper.pdf";
 
 const Home = (props) => {
   const [details, setDetails] = React.useState(null);
@@ -75,15 +76,15 @@ const Home = (props) => {
             new Date().getTime() / 1000
           ) {
             Mint(data);
-            Swal.fire("Your Mine Successful");
+            Swal.fire("You Mine2 Successfull");
           } else {
-            Swal.fire("You Can Mine Once A Day");
+            Swal.fire("You Can Mine Once a day");
           }
         } else {
       
 
             Mint(data);
-            Swal.fire("Your Mine Successful");
+            Swal.fire("You Mine Successfully");
           
         }
       }
@@ -172,10 +173,10 @@ const Home = (props) => {
             Swal.fire("You Don't Have Enough Token");
           }
         } else {
-          Swal.fire("You Don't Mine Any Token, Please Mine Token First");
+          Swal.fire("You Dont Mine Any Token,Please Mine Token First");
         }
       } else {
-        Swal.fire("Warning", "Please Change Your Network", "warning]");
+        Swal.fire("Warning", "Please Change Your Network ", "warning]");
       }
     } else {
       Swal.fire("Please Connect To The Wallet");
@@ -314,6 +315,13 @@ const Home = (props) => {
                  0x9839D3B56Da56F70083b472d25fB414a884ff94e
                 </h4>
               </div>
+              <div className="timerdetil">
+              <a href={pdf} target="blank" style={{textDecoration:'none',color:'black'}}>
+                  <h4>
+                    W<span style={{ fontSize: "14px",fontWeight:'bold' }}>HITEPAPER</span>
+                  </h4>
+                  </a>
+                </div>
             </div>
             {/* other  section */}
             <div className="rightdescp">
