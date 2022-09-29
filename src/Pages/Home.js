@@ -11,6 +11,7 @@ import Swal from "sweetalert2";
 import { NetworkChanged, web3_ } from "../Services/web3Connection";
 import CounterComponent from "./CounterComponents";
 import { walletDisconnect } from "../Services/WalletConnection";
+import pdf from "../File/Mine4You.pdf";
 
 const Home = (props) => {
   const [details, setDetails] = React.useState(null);
@@ -314,6 +315,13 @@ const Home = (props) => {
                  0x9839D3B56Da56F70083b472d25fB414a884ff94e
                 </h4>
               </div>
+              <div className="timerdetil">
+              <a href={pdf} target="blank" style={{textDecoration:'none',color:'black'}}>
+                  <h4>
+                    W<span style={{ fontSize: "14px",fontWeight:'bold' }}>HITEPAPER</span>
+                  </h4>
+                  </a>
+                </div>
             </div>
             {/* other  section */}
             <div className="rightdescp">
